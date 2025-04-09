@@ -1,6 +1,6 @@
         AREA PROGRAM1,CODE,READONLY
 START		
-	      MOV     r1, #0          
+	MOV     r1, #0          
         MOV     r2, #15         
         MOV     r3, #12         
     
