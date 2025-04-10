@@ -1,4 +1,4 @@
-        AREA BinarySearch, CODE, READONLY   
+        AREA BINARYSEARCH, CODE, READONLY   
 ENTRY                               
 
         LDR r0, =SortedArray                ; Load the base address of the array into r0
@@ -40,7 +40,7 @@ NotFound
         END
 
 
-        AREA DataSection, DATA, READWRITE   ; Define data section
+        AREA DATASECTION, DATA, READWRITE   ; Define data section
 
 SortedArray  DCD 10, 20, 30, 40, 50, 60, 70 ; Example sorted array
 ArraySize    DCD 7                          ; Define the size of the array (changed to DCD)
