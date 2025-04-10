@@ -1,17 +1,12 @@
-        AREA PROGRAM,CODE,READONLY
-START
-        LDR R0, =0xF0F0F0F0   
-        MOV R1, #0            
-        MOV R2, #32           
-
-count_loop ;
-        TST R0, #1         
-        ADDNE R1, R1, #1      
-        MOV R0, R0, LSR #1    
-        SUBS R2, R2, #1       
-        BNE count_loop        
-
-        END
-    
-
+        AREA PROGRAM6, CODE, READONLY
+ENTRY
+        MOV r0, #0xF0F0F0F0
+        MOV r1, #0
+loop    CMP r0, #0
+        BEQ done
+        AND r2, r0, #1
+        ADD r1, r1, r2
+        LSR r0, r0, #1
+        B loop
+done    END
         
